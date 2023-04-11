@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.instruction {
+    display: flex;
+    justify-content: center;
+}
+
+.inquiry_field {
+    display: flex;
+    justify-content: center;
+}
+
+.response {
+    display: flex;
+    justify-content: center;
+}
+
+.return {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    position: relative;
+    top: 100px;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(126, 126, 126);
+}
+
+input[type=text] {
+    width: 500px;
+    height: 30px;
+    font-size: 17px;
+}
+
+input[type=submit] {
+    width: 100px;
+    height: 36px;
+    font-size: 17px;
+}
+
+.response p {
+    margin: 20px 100px 0px 100px;
+}

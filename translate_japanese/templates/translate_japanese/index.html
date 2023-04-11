@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihongo Helper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'translate_japanese/styles/index.css' %}">
+</head>
+
+<body>
+    
+    <div class="heading">
+        <h1>Welcome! I am your Japanese Chat Assistant! Which mode would you like to select?</h1>
+    </div>
+
+    <div class="options">
+        <div></div>
+        <a href="{% url 'enja' %}" class="link-1"><p>English to Japanese</p></a>
+        <a href="{% url 'jaen' %}" class="link-2"><p>Japanese to English</p></a>
+        <a href="{% url 'jaja' %}" class="link-3"><p>Japanese to Japanese</p></a>
+        <div></div>
+    </div>
+
+    <div class="descriptions">
+        <div class="enja-description">
+            <p>Recommended for beginners. You will speak to <br> me in English while I respond to you in Japanese. <br>This is mostly for reading practice.</p>
+        </div>
+        <div class="jaen-description">
+            <p>You will speak to me in Japanese while I respond <br>to you in English. This is mostly for helping <br>you make coherent sentences.</p>
+        </div>
+        <div class="jaja-description">
+            <p>Recommended for experienced learners. You will <br>speak to me in Japanese while I respond to you<br> in Japanese. Test yourself to see if you can both <br>make coherent sentences and understand my reponses.</p>
+        </div>
+    </div>
+        
+    <div>
+        <p>* This version does not support web search features</p>
+    </div>
+
+</body>
+</html>

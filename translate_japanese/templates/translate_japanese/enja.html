@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihongo Helper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'translate_japanese/styles/chat.css' %}">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>What would you like to talk about?</h1>
+    </div>
+
+    <div class="instruction">
+        <p>You will speak in English while I will respond in Japanese.</p>
+    </div>
+
+    <div class="inquiry_field">
+        <form method="POST">
+            {% csrf_token %}
+        <input type="text" id="inquiry" name="inquiry">
+        <input type="submit" value="Submit"></button>
+        </form>
+    </div>
+
+    <div class="response">
+        {% if chatbot_response %}
+            <p>{{ chatbot_response }}</p>
+        {% else %}
+            <p>私の回答は、あなたが回答を提出した時点でここに表示されます。</p>
+        {% endif %}
+    </div>
+
+    <div class="return">
+        <a href="{% url 'index' %}"><p>Go back to homepage</p></a>
+    </div>
+
+</body>
+</html>
