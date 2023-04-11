@@ -36,7 +36,7 @@ def enja(request):
     message = None
     payload = {
     "enable_google_results": False,
-    "enable_memory": True,
+    "enable_memory": False,
     "input_text": request.POST.get('inquiry')
     }
     headers = {
@@ -66,7 +66,7 @@ def jaen(request):
     message = None
     payload = {
     "enable_google_results": False,
-    "enable_memory": True,
+    "enable_memory": False,
     "input_text": request.POST.get('inquiry')
     }
     headers = {
@@ -96,7 +96,7 @@ def jaja(request):
     message = None
     payload = {
     "enable_google_results": False,
-    "enable_memory": True,
+    "enable_memory": False,
     "input_text": request.POST.get('inquiry')
     }
     headers = {
