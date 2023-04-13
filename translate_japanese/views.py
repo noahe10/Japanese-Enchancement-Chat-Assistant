@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import requests, deepl, os, openai, json
+import requests, deepl, os, json
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -7,7 +7,6 @@ load_dotenv()
 
 # API Keys
 deepl_auth_key = os.getenv('deepl_key', None)
-openai_auth_key = os.getenv('openai_key', None)
 writesonic_auth_key = os.getenv('writesonic_key', None)
 url = os.getenv('url_key', None)
 
